@@ -1,0 +1,210 @@
+/*tml {
+    background-image: radial-gradient( red, orange, yellow, green, blue, indigo, violet);
+}*/
+nav {
+    background-color: dimgray;
+    text-align: center;
+
+}
+.wrapper {
+    display: grid;
+grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 20% ) ;
+    grid-template-rows: repeat(4, [row] auto  );
+    background-color: #fff;
+    color: white;
+}
+.Box {
+    background-color: yellow;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+.a {
+    grid-column: col / span 2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    grid-column: col 4 / span 2;
+    grid-row: row ;
+    display: flex;
+    justify-content: center;
+}
+.c {
+    grid-column: col / span 5 ;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.d {
+    grid-column: col / span 3;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+.e {
+    grid-column: col 3 / span 3;
+    grid-row: row 3 ;
+    display: flex;
+    justify-content: center;
+}
+.f {
+    grid-column: col 2 / span 3;
+    grid-row: row 2 ;
+    display: flex;
+    justify-content: center;
+    z-index: 20;
+}
+.nav-wrapper {
+    background-color: royalblue;
+}
+nav ul {
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    padding: 5px 30px;
+}
+h1 {
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 10px red;
+}
+.h2class {
+    color: rgb(25, 179, 25);
+    /*You can adjust the color by hovering over it>*/
+}
+#italic {
+    color: orange;
+}
+.container {
+    border: 10px dashed grey;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /*or you can type margin: 10px 25px; OR you can type margin: 10px 25px 10px 25px; Basically it goes clockwise for order*/
+    padding: 5px 30px;
+    /*the previous comment applies the same to padding as well*/
+}
+.box{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    background: blue;
+    /*for display, inline makes the block only as big as the actual text.  Inline-block makes the box as big as instructed due to your width and height.*/
+}
+a {
+    text-decoration-line: none;
+}
+.circle-img {
+    border-radius: 50%;
+}
+img {
+    box-shadow: 5px 5px 10px grey;
+}
+.flex {
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#box2 {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: 4s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, purple, orange, yellow, pink, purple);
+}
+#box3 {
+    animation: getBigger infinite 8s ease-in;
+    border-radius: 50%;
+    background: orange;
+}
+#box4 {
+    animation: changeColors 3s 2s forwards;
+}
+#box5 {
+    animation: moveBox 5s 3s;
+    background-color: red;
+    position: relative;
+}
+#box6 {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+    /*this makes the object fade*/
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes getBigger {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: (.5);
+    }
+    /*makes the box get bigger and then smaller*/
+}
+@keyframes changeColors {
+    0% {background-color: grey;}
+    25% {background-color: purple;}
+    50% {background-color: yellow;}
+    75% {background-color: pink;}
+    100% {background-color: grey;}
+}
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px}
+}
+.input-field {
+    margin: 20px;
+}
+form input {
+    display: block;
+    margin: 30px;
+}
+form textarea {
+    display: block;
+    margin: 30px;
+}
+form button {
+    display: block;
+    margin: 30px;
+}
+/*since the three form elements are the same styles, you can also write it out as.... form input, textarea, button {display: block; margin: 30px;}*/
